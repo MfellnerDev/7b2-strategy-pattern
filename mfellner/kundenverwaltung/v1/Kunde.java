@@ -29,7 +29,7 @@ public class Kunde {
   public double berechnePreis(List<Tennisstunde> l) {
     return this.abrechnung.berechnePreis(l);
   }
-  
+
   @Override
   public String toString() {
     return "\nName: " + this.name + "\n Abrechnungsart: " + this.abrechnung.toString();

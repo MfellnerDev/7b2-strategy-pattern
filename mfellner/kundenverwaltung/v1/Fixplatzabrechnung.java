@@ -29,6 +29,6 @@ public class Fixplatzabrechnung implements Abrechnung {
 
     @Override
     public String toString()    {
-        return this.getClass().getSimpleName() + "\nFixstunden: " + this.fixStunden + "\nFixpreis: " + this.fixPreis;
+        return this.getClass().getSimpleName() + "\nFixstunden: " + this.fixStunden + "h" + "\nFixpreis: " + this.fixPreis + FormatKonstanten.WAEHRUNG;
     }
 }

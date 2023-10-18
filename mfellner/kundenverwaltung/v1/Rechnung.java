@@ -8,7 +8,7 @@ public class Rechnung {
   private LocalDate bis;
   private Kunde kunde;
   private List<Tennisstunde> stunden;
-  
+
   public Rechnung(Kunde kunde, LocalDate von) {
     this.von = von;
     this.kunde = kunde;
@@ -18,7 +18,7 @@ public class Rechnung {
   public boolean add(Tennisstunde tennisstunde) {
     return stunden.add(tennisstunde);
   }
-  
+
   public void setBis(LocalDate bis) {
     this.bis = bis;
   }
@@ -26,7 +26,7 @@ public class Rechnung {
   public LocalDate getBis() {
     return bis;
   }
-  
+
   public LocalDate getVon() {
     return von;
   }
@@ -34,15 +34,15 @@ public class Rechnung {
   public Kunde getKunde() {
     return kunde;
   }
-  
+
   public int getAnzahlStunden() {
     return stunden.size();
   }
-  
+
   public double rechnungssumme() {
     return kunde.berechnePreis(stunden);
   }
-  
+
   public String rechnungstext() {
     StringBuilder text = new StringBuilder("Rechnung");
     text.append("\nKunde: ");
@@ -57,10 +57,10 @@ public class Rechnung {
       text.append(", ");
     }
     text.append("\nGesamt: ");
-    text.append(FormatKonstanten.PREIS_FORMAT.format(this.rechnungssumme())); 
-    text.append(" "); 
+    text.append(FormatKonstanten.PREIS_FORMAT.format(this.rechnungssumme()));
+    text.append(" ");
     text.append(FormatKonstanten.WAEHRUNG);
     return text.toString();
   }
-  
+
 }

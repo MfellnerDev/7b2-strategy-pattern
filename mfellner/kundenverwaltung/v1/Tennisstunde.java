@@ -3,7 +3,7 @@ package mfellner.kundenverwaltung.v1;
 public class Tennisstunde {
   private String bezeichnung;
   private double preis;
-  
+
 
   public Tennisstunde(String bezeichnung, double preis) {
     super();
@@ -26,11 +26,11 @@ public class Tennisstunde {
   public void setPreis(double preis) {
     this.preis = preis;
   }
-  
+
   public String toString() {
-    return this.bezeichnung + " (" + 
-        FormatKonstanten.PREIS_FORMAT.format(preis) + " " +
-        FormatKonstanten.WAEHRUNG + ")";
+    return this.bezeichnung + " (" +
+            FormatKonstanten.PREIS_FORMAT.format(preis) + " " +
+            FormatKonstanten.WAEHRUNG + ")";
   }
-  
+
 }
